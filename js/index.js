@@ -52,14 +52,14 @@ const dom = {
     searchArea: document.getElementById("searchArea"),
 };
 
-window.SolaraDom = dom;
+window.QimingDom = dom;
 
-const isMobileView = Boolean(window.__SOLARA_IS_MOBILE);
+const isMobileView = Boolean(window.__QIMING_IS_MOBILE);
 
-const mobileBridge = window.SolaraMobileBridge || {};
+const mobileBridge = window.QimingMobileBridge || {};
 mobileBridge.handlers = mobileBridge.handlers || {};
 mobileBridge.queue = Array.isArray(mobileBridge.queue) ? mobileBridge.queue : [];
-window.SolaraMobileBridge = mobileBridge;
+window.QimingMobileBridge = mobileBridge;
 
 function invokeMobileHook(name, ...args) {
     if (!isMobileView) {
