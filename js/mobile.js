@@ -1,21 +1,21 @@
 (function () {
-    if (!window.__SOLARA_IS_MOBILE) {
+    if (!window.__QIMING_IS_MOBILE) {
         return;
     }
 
-    const bridge = window.SolaraMobileBridge || {};
+    const bridge = window.QimingMobileBridge || {};
     bridge.handlers = bridge.handlers || {};
     bridge.queue = Array.isArray(bridge.queue) ? bridge.queue : [];
-    window.SolaraMobileBridge = bridge;
+    window.QimingMobileBridge = bridge;
 
-    const dom = window.SolaraDom || {};
+    const dom = window.QimingDom || {};
     let initialized = false;
 
     function updateMobileToolbarTitleImpl() {
         if (!dom.mobileToolbarTitle) {
             return;
         }
-        dom.mobileToolbarTitle.textContent = "Solara";
+        dom.mobileToolbarTitle.textContent = "启明音乐";
     }
 
     function updateMobileOverlayScrim() {
